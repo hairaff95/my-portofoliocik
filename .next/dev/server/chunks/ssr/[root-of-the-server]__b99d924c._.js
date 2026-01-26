@@ -35,7 +35,8 @@ function FloatingNavbar() {
                         lineNumber: 17,
                         columnNumber: 24
                     }, void 0),
-                    label: "Home"
+                    label: "Home",
+                    href: "#hero"
                 }, void 0, false, {
                     fileName: "[project]/components/floating-navbar.tsx",
                     lineNumber: 17,
@@ -49,7 +50,8 @@ function FloatingNavbar() {
                         lineNumber: 18,
                         columnNumber: 24
                     }, void 0),
-                    label: "About"
+                    label: "About",
+                    href: "#about"
                 }, void 0, false, {
                     fileName: "[project]/components/floating-navbar.tsx",
                     lineNumber: 18,
@@ -63,7 +65,8 @@ function FloatingNavbar() {
                         lineNumber: 19,
                         columnNumber: 24
                     }, void 0),
-                    label: "Work"
+                    label: "Work",
+                    href: "#work"
                 }, void 0, false, {
                     fileName: "[project]/components/floating-navbar.tsx",
                     lineNumber: 19,
@@ -77,7 +80,8 @@ function FloatingNavbar() {
                         lineNumber: 20,
                         columnNumber: 24
                     }, void 0),
-                    label: "Gallery"
+                    label: "Gallery",
+                    href: "#gallery"
                 }, void 0, false, {
                     fileName: "[project]/components/floating-navbar.tsx",
                     lineNumber: 20,
@@ -114,65 +118,13 @@ function NavItem({ icon, label, href }) {
         href: href,
         className: " flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/10 transition ",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(NavItem, {
-                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$house$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Home$3e$__["Home"], {
-                    size: 16
-                }, void 0, false, {
-                    fileName: "[project]/components/floating-navbar.tsx",
-                    lineNumber: 45,
-                    columnNumber: 20
-                }, void 0),
-                label: "Home",
-                href: "#hero"
-            }, void 0, false, {
-                fileName: "[project]/components/floating-navbar.tsx",
-                lineNumber: 45,
-                columnNumber: 5
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(NavItem, {
-                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
-                    size: 16
-                }, void 0, false, {
-                    fileName: "[project]/components/floating-navbar.tsx",
-                    lineNumber: 46,
-                    columnNumber: 20
-                }, void 0),
-                label: "About",
-                href: "#about"
+            icon,
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                children: label
             }, void 0, false, {
                 fileName: "[project]/components/floating-navbar.tsx",
                 lineNumber: 46,
-                columnNumber: 5
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(NavItem, {
-                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$briefcase$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Briefcase$3e$__["Briefcase"], {
-                    size: 16
-                }, void 0, false, {
-                    fileName: "[project]/components/floating-navbar.tsx",
-                    lineNumber: 47,
-                    columnNumber: 20
-                }, void 0),
-                label: "Work",
-                href: "#work"
-            }, void 0, false, {
-                fileName: "[project]/components/floating-navbar.tsx",
-                lineNumber: 47,
-                columnNumber: 5
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(NavItem, {
-                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Image$3e$__["Image"], {
-                    size: 16
-                }, void 0, false, {
-                    fileName: "[project]/components/floating-navbar.tsx",
-                    lineNumber: 48,
-                    columnNumber: 20
-                }, void 0),
-                label: "Gallery",
-                href: "#gallery"
-            }, void 0, false, {
-                fileName: "[project]/components/floating-navbar.tsx",
-                lineNumber: 48,
-                columnNumber: 5
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {

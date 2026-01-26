@@ -14,10 +14,10 @@ export default function FloatingNavbar() {
         shadow-lg
         text-sm
       ">
-        <NavItem icon={<Home size={16} />} label="Home" />
-        <NavItem icon={<User size={16} />} label="About" />
-        <NavItem icon={<Briefcase size={16} />} label="Work" />
-        <NavItem icon={<Image size={16} />} label="Gallery" />
+        <NavItem icon={<Home size={16} />} label="Home" href="#hero" />
+        <NavItem icon={<User size={16} />} label="About" href="#about" />
+        <NavItem icon={<Briefcase size={16} />} label="Work" href="#work" />
+        <NavItem icon={<Image size={16} />} label="Gallery" href="#gallery" />
         <button className="
           ml-2
           p-2 rounded-full
@@ -42,11 +42,8 @@ function NavItem({ icon, label, href }: any) {
         transition
       "
     >
-    <NavItem icon={<Home size={16} />} label="Home" href="#hero" />
-    <NavItem icon={<User size={16} />} label="About" href="#about" />
-    <NavItem icon={<Briefcase size={16} />} label="Work" href="#work" />
-    <NavItem icon={<Image size={16} />} label="Gallery" href="#gallery" />
+      {icon}
+      <span>{label}</span>
     </a>
   )
 }
-
