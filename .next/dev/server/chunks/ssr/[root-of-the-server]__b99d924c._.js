@@ -23,9 +23,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 function FloatingNavbar() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "fixed top-6 left-1/2 -translate-x-1/2 z-50",
+        className: "fixed top-4 left-1/2 -translate-x-1/2 z-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: " flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/10 dark:bg-black/20 backdrop-blur-md shadow-lg text-sm ",
+            className: " flex items-center gap-1 px-3 py-2 rounded-full bg-white/10 dark:bg-black/30 backdrop-blur-md border border-white/10 shadow-lg text-xs md:text-sm ",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(NavItem, {
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$house$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Home$3e$__["Home"], {
@@ -36,7 +36,7 @@ function FloatingNavbar() {
                         columnNumber: 24
                     }, void 0),
                     label: "Home",
-                    href: "#hero"
+                    target: "#hero"
                 }, void 0, false, {
                     fileName: "[project]/components/floating-navbar.tsx",
                     lineNumber: 17,
@@ -51,7 +51,7 @@ function FloatingNavbar() {
                         columnNumber: 24
                     }, void 0),
                     label: "About",
-                    href: "#about"
+                    target: "#about"
                 }, void 0, false, {
                     fileName: "[project]/components/floating-navbar.tsx",
                     lineNumber: 18,
@@ -65,8 +65,8 @@ function FloatingNavbar() {
                         lineNumber: 19,
                         columnNumber: 24
                     }, void 0),
-                    label: "Work",
-                    href: "#work"
+                    label: "Project",
+                    target: "#project"
                 }, void 0, false, {
                     fileName: "[project]/components/floating-navbar.tsx",
                     lineNumber: 19,
@@ -81,24 +81,24 @@ function FloatingNavbar() {
                         columnNumber: 24
                     }, void 0),
                     label: "Gallery",
-                    href: "#gallery"
+                    target: "#gallery"
                 }, void 0, false, {
                     fileName: "[project]/components/floating-navbar.tsx",
                     lineNumber: 20,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    className: " ml-2 p-2 rounded-full hover:bg-white/10 ",
+                    className: " ml-1 p-2 rounded-full hover:bg-white/10 transition ",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
                         size: 16
                     }, void 0, false, {
                         fileName: "[project]/components/floating-navbar.tsx",
-                        lineNumber: 26,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/floating-navbar.tsx",
-                    lineNumber: 21,
+                    lineNumber: 23,
                     columnNumber: 9
                 }, this)
             ]
@@ -113,23 +113,30 @@ function FloatingNavbar() {
         columnNumber: 5
     }, this);
 }
-function NavItem({ icon, label, href }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-        href: href,
-        className: " flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/10 transition ",
+function NavItem({ icon, label, target }) {
+    const handleClick = ()=>{
+        const el = document.querySelector(target);
+        el?.scrollIntoView({
+            behavior: "smooth"
+        });
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+        onClick: handleClick,
+        className: " flex items-center gap-2 px-2 py-1.5 md:px-3 md:py-2 rounded-full hover:bg-white/10 transition ",
         children: [
             icon,
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "hidden md:inline",
                 children: label
             }, void 0, false, {
                 fileName: "[project]/components/floating-navbar.tsx",
-                lineNumber: 46,
+                lineNumber: 57,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/floating-navbar.tsx",
-        lineNumber: 35,
+        lineNumber: 44,
         columnNumber: 5
     }, this);
 }
@@ -148,6 +155,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 function Hero() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].section, {
+        id: "hero",
         initial: {
             opacity: 0,
             y: 40
@@ -159,49 +167,48 @@ function Hero() {
         transition: {
             duration: 0.6
         },
-        className: "py-24 grid md:grid-cols-2 gap-12 items-center",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-5xl font-bold text-black dark:text-white",
-                        children: "Hi, I'm Low Nex I build digital products"
-                    }, void 0, false, {
-                        fileName: "[project]/components/hero.tsx",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "mt-4 text-gray-600 dark:text-gray-400",
-                        children: "Frontend developer focused on clean UI and solid UX."
-                    }, void 0, false, {
-                        fileName: "[project]/components/hero.tsx",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "mt-6 px-6 py-3 bg-black text-white rounded",
-                        children: "View My Work"
-                    }, void 0, false, {
-                        fileName: "[project]/components/hero.tsx",
-                        lineNumber: 19,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/hero.tsx",
-                lineNumber: 11,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "h-64 bg-gray-100 rounded-xl"
-            }, void 0, false, {
-                fileName: "[project]/components/hero.tsx",
-                lineNumber: 23,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+        className: " min-h-screen flex flex-col items-center justify-center text-center px-6 md:grid md:grid-cols-2 md:text-left gap-12 ",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                    className: " text-3xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white ",
+                    children: [
+                        "Hi, I'm Low Nex ",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                            fileName: "[project]/components/hero.tsx",
+                            lineNumber: 30,
+                            columnNumber: 27
+                        }, this),
+                        "I build digital products"
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/hero.tsx",
+                    lineNumber: 23,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: " mt-4 text-gray-600 dark:text-gray-400 text-sm md:text-base max-w-xl mx-auto md:mx-0 ",
+                    children: "Frontend developer focused on clean UI and solid UX."
+                }, void 0, false, {
+                    fileName: "[project]/components/hero.tsx",
+                    lineNumber: 34,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    className: " mt-6 px-6 py-3 bg-black text-white rounded-full text-sm md:text-base ",
+                    children: "View My Work"
+                }, void 0, false, {
+                    fileName: "[project]/components/hero.tsx",
+                    lineNumber: 45,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/hero.tsx",
+            lineNumber: 22,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "[project]/components/hero.tsx",
         lineNumber: 6,
         columnNumber: 5

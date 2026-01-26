@@ -3,25 +3,29 @@ import { Home, User, Briefcase, Image, Sun } from "lucide-react"
 
 export default function FloatingNavbar() {
   return (
-    <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
       <div className="
-        flex items-center gap-2
-        px-4 py-2
+        flex items-center gap-1
+        px-3 py-2
         rounded-full
-        border border-white/10
-        bg-white/10 dark:bg-black/20
+        bg-white/10 dark:bg-black/30
         backdrop-blur-md
+        border border-white/10
         shadow-lg
-        text-sm
+        text-xs md:text-sm
       ">
-        <NavItem icon={<Home size={16} />} label="Home" href="#hero" />
-        <NavItem icon={<User size={16} />} label="About" href="#about" />
-        <NavItem icon={<Briefcase size={16} />} label="Work" href="#work" />
-        <NavItem icon={<Image size={16} />} label="Gallery" href="#gallery" />
+        <NavItem icon={<Home size={16} />} label="Home" target="#hero" />
+        <NavItem icon={<User size={16} />} label="About" target="#about" />
+        <NavItem icon={<Briefcase size={16} />} label="Project" target="#project" />
+        <NavItem icon={<Image size={16} />} label="Gallery" target="#gallery" />
+
+        {/* sun icon tetap ada */}
         <button className="
-          ml-2
-          p-2 rounded-full
+          ml-1
+          p-2
+          rounded-full
           hover:bg-white/10
+          transition
         ">
           <Sun size={16} />
         </button>
@@ -30,20 +34,29 @@ export default function FloatingNavbar() {
   )
 }
 
-function NavItem({ icon, label, href }: any) {
+function NavItem({ icon, label, target }: any) {
+  const handleClick = () => {
+    const el = document.querySelector(target)
+    el?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
-    <a
-      href={href}
+    <button
+      onClick={handleClick}
       className="
         flex items-center gap-2
-        px-3 py-2
+        px-2 py-1.5
+        md:px-3 md:py-2
         rounded-full
         hover:bg-white/10
         transition
       "
     >
       {icon}
-      <span>{label}</span>
-    </a>
+      {/* INI KUNCI UTAMANYA */}
+      <span className="hidden md:inline">
+        {label}
+      </span>
+    </button>
   )
 }

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/mymac/Perkodingan/my-portfolio/app/projects/%5Bslug%5D/page.tsx"],"sourcesContent":["export default function ProjectDetail() {\n  return (\n    <div style={{ color: \"white\", padding: 100 }}>\n      TEST PAGE HIDUP\n    </div>\n  )\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAI,OAAO;YAAE,OAAO;YAAS,SAAS;QAAI;kBAAG;;;;;;AAIlD"}}]
+}
