@@ -11,7 +11,6 @@ export default function Navbar() {
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <button onClick={() => {
-          document.documentElement.classList.toggle("dark")
           setDark(!dark)
         }}>
           {dark ? "Light" : "Dark"}

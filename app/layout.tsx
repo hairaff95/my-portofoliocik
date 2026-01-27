@@ -1,22 +1,22 @@
-import type { Metadata } from "next";
+"use client"
 import { Bricolage_Grotesque } from "next/font/google"
-import "./globals.css";
+import { useEffect } from "react"
+import "./globals.css"
+import FloatingNavbar from "@/components/floating-navbar"
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  weight: ["200","300","400","500","600","700","800"],
 })
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={bricolage.className}>
+    <html lang="en" className="scroll-smooth">
+      <body className="font-sans">
+        <FloatingNavbar />
         {children}
       </body>
     </html>
   )
 }
+
