@@ -12,7 +12,7 @@ const bricolage = Bricolage_Grotesque({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="font-sans">
+      <body className="font-sans bg-white">
         <FloatingNavbar />
         {children}
       </body>

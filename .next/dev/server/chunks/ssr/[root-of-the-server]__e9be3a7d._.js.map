@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///Users/mymac/Perkodingan/my-portfolio/app/gallery/page.tsx"],"sourcesContent":["export default function GalleryPage() {\n  return (\n    <main className=\"min-h-screen px-8 md:px-24 py-24\">\n      <h1 className=\"text-4xl font-bold mb-12\">\n        Gallery\n      </h1>\n\n      <div className=\"grid grid-cols-2 md:grid-cols-3 gap-6\">\n        {Array.from({ length: 9 }).map((_, i) => (\n          <div\n            key={i}\n            className=\"\n              aspect-[4/3]\n              rounded-2xl\n              overflow-hidden\n              bg-gray-200\n              hover:scale-[1.02]\n              transition\n            \"\n          >\n            <img\n              src={`https://picsum.photos/800/600?random=${i}`}\n              alt=\"\"\n              className=\"w-full h-full object-cover\"\n            />\n          </div>\n        ))}\n      </div>\n    </main>\n  )\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;;0BACd,8OAAC;gBAAG,WAAU;0BAA2B;;;;;;0BAIzC,8OAAC;gBAAI,WAAU;0BACZ,MAAM,IAAI,CAAC;oBAAE,QAAQ;gBAAE,GAAG,GAAG,CAAC,CAAC,GAAG,kBACjC,8OAAC;wBAEC,WAAU;kCASV,cAAA,8OAAC;4BACC,KAAK,CAAC,qCAAqC,EAAE,GAAG;4BAChD,KAAI;4BACJ,WAAU;;;;;;uBAbP;;;;;;;;;;;;;;;;AAoBjB"}}]
+}

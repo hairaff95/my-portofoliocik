@@ -1,22 +1,25 @@
-import FloatingNavbar from "@/components/floating-navbar"
+"use client"
+
+import { useEffect } from "react"
 import Hero from "@/components/hero"
-import Projects from "@/components/projects"
 import ProjectTransition from "@/components/project-transition"
-import Skills from "@/components/skills"
-import ProjectsGrid from "@/components/projects-grid"
 
 export default function Home() {
+  useEffect(() => {
+    if (window.location.hash === "#projects") {
+      const el = document.getElementById("projects")
+      if (el) {
+        requestAnimationFrame(() => {
+          el.scrollIntoView({ behavior: "smooth" })
+        })
+      }
+    }
+  }, [])
+
   return (
-    <>
-      <FloatingNavbar />
-      <main>
+    <main>
       <Hero />
-      <ProjectTransition /> 
-      <Skills />
+      <ProjectTransition />
     </main>
-  </>
   )
 }
-
-
-

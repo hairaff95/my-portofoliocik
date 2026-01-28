@@ -11,7 +11,10 @@ export default function ProjectTransition() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const maskRef = useRef<HTMLDivElement>(null)
 
-  useLayoutEffect(() => {
+useLayoutEffect(() => {
+  if (!sectionRef.current || !maskRef.current) return
+
+  const ctx = gsap.context(() => {
     gsap.to(maskRef.current, {
       yPercent: -100,
       ease: "expo.inOut",
@@ -21,12 +24,19 @@ export default function ProjectTransition() {
         end: "+=150%",
         scrub: true,
         pin: true,
+        anticipatePin: 1,
       },
     })
-  }, [])
+  }, sectionRef)
+
+  return () => {
+    ctx.revert()
+    ScrollTrigger.getAll().forEach(t => t.kill())
+  }
+}, [])
 
   return (
-    <section ref={sectionRef} className="relative">
+    <section ref={sectionRef} id="projects" className="relative bg-neutral-900 min-h-screen">
       <ProjectsGrid />
 
       <div

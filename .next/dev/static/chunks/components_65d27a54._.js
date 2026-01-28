@@ -25,45 +25,54 @@ function Hero() {
         transition: {
             duration: 0.6
         },
-        className: " min-h-screen flex flex-col items-center justify-center text-center px-8 md:px-24 md:grid md:grid-cols-2 md:text-left gap-12 bg-white transition-colors duration-300 ",
+        className: " min-h-screen flex items-center justify-center text-center px-8 md:px-24 bg-white ",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-4xl",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                    className: " text-3xl md:text-5xl lg:text-10xl font-bold text-black ",
+                    className: " text-3xl md:text-5xl lg:text-10xl font-bold text-black leading-tight ",
                     children: [
                         "Hi, Saya Rafi ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/components/hero.tsx",
-                            lineNumber: 32,
+                            lineNumber: 28,
                             columnNumber: 25
                         }, this),
                         "Saya seorang mahasiswa dari Semarang dengan passion di bidang IT."
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/hero.tsx",
-                    lineNumber: 25,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: " mt-4 text-gray-600 text-sm md:text-base max-w-xl mx-auto md:mx-0 ",
+                    className: " mt-6 text-gray-600 text-sm md:text-lg max-w-2xl mx-auto ",
                     children: "Frontend developer focused on clean UI and solid UX."
                 }, void 0, false, {
                     fileName: "[project]/components/hero.tsx",
-                    lineNumber: 36,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    className: " mt-6 px-6 py-3 bg-black text-white rounded-full text-sm md:text-base transition-colors ",
-                    children: "View My Work"
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mt-10 flex justify-center",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        href: "#projects",
+                        className: " inline-flex items-center gap-2 px-8 py-3 rounded-full bg-black text-white text-sm md:text-base hover:bg-black/80 transition ",
+                        children: "View My Work"
+                    }, void 0, false, {
+                        fileName: "[project]/components/hero.tsx",
+                        lineNumber: 44,
+                        columnNumber: 11
+                    }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/hero.tsx",
-                    lineNumber: 47,
+                    lineNumber: 43,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/hero.tsx",
-            lineNumber: 24,
+            lineNumber: 19,
             columnNumber: 7
         }, this)
     }, void 0, false, {
@@ -263,6 +272,7 @@ const projects = [
 ];
 function ProjectsGrid() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        id: "projects",
         className: "bg-white px-8 md:px-24 py-24",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -390,26 +400,41 @@ function ProjectTransition() {
     const maskRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLayoutEffect"])({
         "ProjectTransition.useLayoutEffect": ()=>{
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].to(maskRef.current, {
-                yPercent: -100,
-                ease: "expo.inOut",
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top top",
-                    end: "+=150%",
-                    scrub: true,
-                    pin: true
+            if (!sectionRef.current || !maskRef.current) return;
+            const ctx = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].context({
+                "ProjectTransition.useLayoutEffect.ctx": ()=>{
+                    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].to(maskRef.current, {
+                        yPercent: -100,
+                        ease: "expo.inOut",
+                        scrollTrigger: {
+                            trigger: sectionRef.current,
+                            start: "top top",
+                            end: "+=150%",
+                            scrub: true,
+                            pin: true,
+                            anticipatePin: 1
+                        }
+                    });
                 }
-            });
+            }["ProjectTransition.useLayoutEffect.ctx"], sectionRef);
+            return ({
+                "ProjectTransition.useLayoutEffect": ()=>{
+                    ctx.revert();
+                    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$ScrollTrigger$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ScrollTrigger"].getAll().forEach({
+                        "ProjectTransition.useLayoutEffect": (t)=>t.kill()
+                    }["ProjectTransition.useLayoutEffect"]);
+                }
+            })["ProjectTransition.useLayoutEffect"];
         }
     }["ProjectTransition.useLayoutEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         ref: sectionRef,
-        className: "relative",
+        id: "projects",
+        className: "relative bg-neutral-900 min-h-screen",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$projects$2d$grid$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/components/project-transition.tsx",
-                lineNumber: 30,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -420,18 +445,18 @@ function ProjectTransition() {
                     children: "Projects"
                 }, void 0, false, {
                     fileName: "[project]/components/project-transition.tsx",
-                    lineNumber: 36,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/project-transition.tsx",
-                lineNumber: 32,
+                lineNumber: 42,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/project-transition.tsx",
-        lineNumber: 29,
+        lineNumber: 39,
         columnNumber: 5
     }, this);
 }

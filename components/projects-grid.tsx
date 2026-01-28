@@ -13,7 +13,7 @@ const projects = [
 
 export default function ProjectsGrid() {
   return (
-    <section className="bg-white px-8 md:px-24 py-24">
+    <section id="projects" className="bg-white px-8 md:px-24 py-24">
       <div className="max-w-[1400px] mx-auto mb-20 px-6">
         <p className="text-sm tracking-widest text-gray-500 mb-4">
           Projects By Rafi
