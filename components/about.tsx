@@ -66,7 +66,7 @@ export default function About() {
           font-bold tracking-tight
           text-white/5 select-none
         ">
-          lownex.
+          hairaff.
         </div>
       </div>
     </section>

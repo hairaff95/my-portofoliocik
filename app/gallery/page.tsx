@@ -4,7 +4,6 @@ export default function GalleryPage() {
       <h1 className="text-4xl font-bold mb-12">
         Gallery
       </h1>
-
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {Array.from({ length: 9 }).map((_, i) => (
           <div

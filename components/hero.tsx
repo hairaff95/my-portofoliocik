@@ -31,8 +31,8 @@ export default function Hero() {
             leading-tight
           "
         >
-          Hi, Saya Rafi <br />
-          Saya seorang mahasiswa dari Semarang dengan passion di bidang IT.
+          Hai, Saya Rafi <br />
+          a software engineer based in Semarang, Indonesia
         </h1>
 
         <p
@@ -63,7 +63,7 @@ export default function Hero() {
               hover:shadow-md
             "
           >
-            View My Work
+            View My Works
           </a>
         </div>
       </div>

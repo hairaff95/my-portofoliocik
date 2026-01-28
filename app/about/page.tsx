@@ -1,38 +1,73 @@
 "use client"
 import { Github, Linkedin, Mail } from "lucide-react"
+import ProfileCard from "@/components/profile-card"
 
 export default function AboutPage() {
   return (
-    <main className="relative min-h-screen px-8 md:px-24 py-24">
-      {/* GRADIENT */}
+    <main className="relative min-h-screen px-8 md:px-24 py-28">
       <div className="absolute inset-0 page-top-gradient pointer-events-none" />
 
-      {/* CONTENT */}
-      <div className="relative z-10">
-
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* ================= HEADER ================= */}
-        <div className="max-w-4xl">
-          <h1 className="text-6xl md:text-7xl font-bold text-[#1f1f1f]">
-            Muhammad Haidar Rafi
-          </h1>
-
-          <p className="mt-4 text-2xl text-[#3a3a3a]">
-            Software Engineer
-          </p>
-
-          <div className="flex gap-4 mt-8">
-            <Social icon={<Github />} label="GitHub" />
-            <Social icon={<Linkedin />} label="LinkedIn" />
-            <Social icon={<Mail />} label="Email" />
+        <section
+          className="
+            grid grid-cols-1 lg:grid-cols-[1fr_280px]
+            gap-16
+            items-start
+          "
+        >
+          {/* PROFILE CARD */}
+          <div
+            className="
+              order-1
+              lg:order-2
+              flex justify-center lg:justify-end
+            "
+          >
+            <ProfileCard />
           </div>
 
-          <p className="mt-12 text-lg leading-relaxed max-w-2xl text-[#2a2a2a]">
-            Hi! Thanks for stopping by. I'm Rafi, a software engineer based in Semarang,
-            Indonesia. I create websites and apps that people truly enjoy. I love
-            building digital experiences that are easy to use and make people's lives
-            a little easier.
-          </p>
-        </div>
+          {/* TEXT CONTENT */}
+          <div
+            className="
+              order-2
+              lg:order-1
+            "
+          >
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#1f1f1f]">
+              Muhammad Haidar Rafi
+            </h1>
+
+            <p className="mt-4 text-xl md:text-2xl text-[#3a3a3a]">
+              Software Engineer
+            </p>
+
+            <div className="flex gap-4 mt-8 flex-wrap">
+              <Social
+                icon={<Github size={18} />}
+                label="GitHub"
+                href="https://github.com/hairaff95"
+              />
+              <Social
+                icon={<Linkedin size={18} />}
+                label="LinkedIn"
+                href="https://www.linkedin.com/in/muhammad-haidar-rafi-k-667032386/"
+              />
+              <Social
+                icon={<Mail size={18} />}
+                label="Email"
+                href="mailto:haidarrafi95@gmail.com"
+              />
+            </div>
+
+            <p className="mt-10 text-lg leading-relaxed max-w-2xl text-[#2a2a2a]">
+              Hi! Thanks for stopping by. I'm Rafi, a software engineer based in
+              Semarang, Indonesia. I create websites and apps that people truly enjoy.
+              I love building digital experiences that are easy to use and make
+              people's lives a little easier.
+            </p>
+          </div>
+        </section>
 
         {/* ================= STUDIES ================= */}
         <section className="mt-32 max-w-5xl">
@@ -49,7 +84,7 @@ export default function AboutPage() {
               name="Universitas Dian Nuswantoro"
               major="Teknik Informatika"
               level="Bachelor's Degree"
-              year="2014 - 2019"
+              year="2023 - Sekarang"
             />
 
             <StudyCard
@@ -83,13 +118,13 @@ export default function AboutPage() {
 
             <SkillSection
               title="Bahasa Pemrograman"
-            desc="Bahasa yang saya gunakan untuk membangun aplikasi."
-            items={[
-              { label: "Python", icon: <img src="https://img.icons8.com/ios-filled/50/python.png" /> },
-              { label: "JavaScript", icon: <img src="https://img.icons8.com/ios-filled/50/javascript.png" /> },
-              { label: "Flutter", icon: <img src="https://img.icons8.com/ios-filled/50/flutter.png" /> },
-              { label: "PHP", icon: <img src="https://img.icons8.com/ios-filled/50/php-logo.png" /> },
-            ]}
+              desc="Bahasa yang saya gunakan untuk membangun aplikasi."
+              items={[
+                { label: "Python", icon: <img src="https://img.icons8.com/ios-filled/50/python.png" /> },
+                { label: "JavaScript", icon: <img src="https://img.icons8.com/ios-filled/50/javascript.png" /> },
+                { label: "Flutter", icon: <img src="https://img.icons8.com/ios-filled/50/flutter.png" /> },
+                { label: "PHP", icon: <img src="https://img.icons8.com/ios-filled/50/php-logo.png" /> },
+              ]}
             />
           </div>
         </section>
@@ -98,23 +133,27 @@ export default function AboutPage() {
   )
 }
 
-/* ---------------- COMPONENTS ---------------- */
+/* ================= COMPONENTS ================= */
 
-function Social({ icon, label }: any) {
+function Social({ icon, label, href }: any) {
   return (
-    <div className="
-      flex items-center gap-2
-      px-4 py-2
-      rounded-full
-      border border-black/20
-      text-sm text-[#1f1f1f]
-      hover:bg-black hover:text-white
-      transition
-      cursor-pointer
-    ">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        flex items-center gap-2
+        px-4 py-2
+        rounded-full
+        border border-black/20
+        text-sm text-[#1f1f1f]
+        hover:bg-black hover:text-white
+        transition
+      "
+    >
       {icon}
       {label}
-    </div>
+    </a>
   )
 }
 
@@ -132,23 +171,10 @@ function StudyCard({ logo, name, major, level, year }: any) {
       hover:shadow-lg
     ">
       <div className="flex items-center gap-6">
-        {/* LOGO */}
-        <div className="
-          w-14 h-14
-          rounded-xl
-          bg-white
-          flex items-center justify-center
-          shadow
-          overflow-hidden
-        ">
-          <img
-            src={logo}
-            alt={name}
-            className="w-full h-full object-contain"
-          />
+        <div className="w-14 h-14 rounded-xl bg-white shadow overflow-hidden flex items-center justify-center">
+          <img src={logo} alt={name} className="w-full h-full object-contain" />
         </div>
 
-        {/* TEXT */}
         <div>
           <h3 className="text-xl font-semibold text-[#1f1f1f]">{name}</h3>
           <p className="text-[#3a3a3a]">{major}</p>
@@ -156,13 +182,10 @@ function StudyCard({ logo, name, major, level, year }: any) {
         </div>
       </div>
 
-      <div className="text-[#5a5a5a]">
-        {year}
-      </div>
+      <div className="text-[#5a5a5a]">{year}</div>
     </div>
   )
 }
-
 
 function SkillSection({ title, desc, items }: any) {
   return (
@@ -179,7 +202,7 @@ function SkillSection({ title, desc, items }: any) {
   )
 }
 
-function SkillBadge({ label, icon }: { label: string, icon?: React.ReactNode }) {
+function SkillBadge({ label, icon }: { label: string; icon?: React.ReactNode }) {
   return (
     <div className="
       flex items-center gap-2
@@ -190,11 +213,9 @@ function SkillBadge({ label, icon }: { label: string, icon?: React.ReactNode }) 
       text-[#1f1f1f]
       hover:bg-black/5
       transition
-      cursor-pointer
     ">
       {icon && <span className="w-5 h-5">{icon}</span>}
       {label}
     </div>
   )
 }
-

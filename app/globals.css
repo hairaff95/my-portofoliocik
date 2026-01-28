@@ -29,6 +29,16 @@ html {
   color: #171717;
 }
 
+html, body {
+  background-color: var(--background);
+  min-height: 100%;
+}
+
+#devtools-indicator,
+.nextjs-toast {
+  display: none !important;
+}
+
 .page-top-gradient {
   position: absolute;
   inset: 0;
@@ -56,6 +66,12 @@ html {
       rgba(255,255,255,0.25) 40%,
       transparent 65%
     );
+}
+
+.dot-bg {
+  background-color: #dff3f1;
+  background-image: radial-gradient(#bfe7e3 1px, transparent 1px);
+  background-size: 6px 6px;
 }
 
 

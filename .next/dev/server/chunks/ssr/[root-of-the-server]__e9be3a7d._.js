@@ -50,17 +50,17 @@ function GalleryPage() {
                             className: "w-full h-full object-cover"
                         }, void 0, false, {
                             fileName: "[project]/app/gallery/page.tsx",
-                            lineNumber: 21,
+                            lineNumber: 20,
                             columnNumber: 13
                         }, this)
                     }, i, false, {
                         fileName: "[project]/app/gallery/page.tsx",
-                        lineNumber: 10,
+                        lineNumber: 9,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.tsx",
-                lineNumber: 8,
+                lineNumber: 7,
                 columnNumber: 7
             }, this)
         ]
