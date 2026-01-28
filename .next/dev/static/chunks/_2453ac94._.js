@@ -13,7 +13,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 function Hero() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].section, {
-        id: "hero",
+        id: "home",
         initial: {
             opacity: 0,
             y: 40
@@ -25,57 +25,66 @@ function Hero() {
         transition: {
             duration: 0.6
         },
-        className: " min-h-screen flex items-center justify-center text-center px-8 md:px-24 bg-white ",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "max-w-4xl",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                    className: " text-3xl md:text-5xl lg:text-10xl font-bold text-black leading-tight ",
-                    children: [
-                        "Hi, Saya Rafi ",
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                            fileName: "[project]/components/hero.tsx",
-                            lineNumber: 28,
-                            columnNumber: 25
-                        }, this),
-                        "Saya seorang mahasiswa dari Semarang dengan passion di bidang IT."
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/hero.tsx",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: " mt-6 text-gray-600 text-sm md:text-lg max-w-2xl mx-auto ",
-                    children: "Frontend developer focused on clean UI and solid UX."
-                }, void 0, false, {
-                    fileName: "[project]/components/hero.tsx",
-                    lineNumber: 32,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mt-10 flex justify-center",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                        href: "#projects",
-                        className: " inline-flex items-center gap-2 px-8 py-3 rounded-full bg-black text-white text-sm md:text-base hover:bg-black/80 transition ",
-                        children: "View My Work"
+        className: " relative min-h-screen flex items-center justify-center text-center px-8 md:px-24 ",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 page-top-gradient pointer-events-none"
+            }, void 0, false, {
+                fileName: "[project]/components/hero.tsx",
+                lineNumber: 20,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative z-10 max-w-4xl",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                        className: " text-3xl md:text-5xl lg:text-7xl font-bold text-black leading-tight ",
+                        children: [
+                            "Hi, Saya Rafi ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                fileName: "[project]/components/hero.tsx",
+                                lineNumber: 34,
+                                columnNumber: 25
+                            }, this),
+                            "Saya seorang mahasiswa dari Semarang dengan passion di bidang IT."
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/hero.tsx",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: " mt-6 text-[#3a3a3a] text-sm md:text-lg max-w-2xl mx-auto ",
+                        children: "Frontend developer focused on clean UI and solid UX."
                     }, void 0, false, {
                         fileName: "[project]/components/hero.tsx",
-                        lineNumber: 44,
-                        columnNumber: 11
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-10 flex justify-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "#projects",
+                            className: " inline-flex items-center px-8 py-3 rounded-full bg-white border border-black/20 text-black text-sm md:text-base transition-all duration-300 hover:shadow-md ",
+                            children: "View My Work"
+                        }, void 0, false, {
+                            fileName: "[project]/components/hero.tsx",
+                            lineNumber: 52,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/hero.tsx",
+                        lineNumber: 51,
+                        columnNumber: 9
                     }, this)
-                }, void 0, false, {
-                    fileName: "[project]/components/hero.tsx",
-                    lineNumber: 43,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/hero.tsx",
-            lineNumber: 19,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/hero.tsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "[project]/components/hero.tsx",
         lineNumber: 6,
         columnNumber: 5
@@ -117,13 +126,13 @@ function ProjectCell({ project }) {
                     }
                 },
                 transition: {
-                    duration: 0.3
+                    duration: 0.25
                 },
-                className: "text-xl font-semibold",
+                className: "text-xl font-semibold z-10",
                 children: project.title
             }, void 0, false, {
                 fileName: "[project]/components/project-cell.tsx",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -136,10 +145,33 @@ function ProjectCell({ project }) {
                     }
                 },
                 transition: {
-                    duration: 0.3
+                    duration: 0.25
                 },
-                className: "absolute inset-4 rounded-2xl bg-black text-white p-6 flex flex-col justify-between",
+                className: " absolute inset-4 rounded-2xl p-4 flex flex-col gap-3 text-black ",
+                style: {
+                    backgroundColor: "#95959526",
+                    backdropFilter: "blur(6px)"
+                },
                 children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "relative w-full h-32 rounded-xl overflow-hidden",
+                        style: {
+                            backgroundColor: project.image ? "transparent" : "rgba(149,149,149,0.35)"
+                        },
+                        children: project.image && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: project.image,
+                            alt: project.title,
+                            className: "absolute inset-0 w-full h-full object-cover"
+                        }, void 0, false, {
+                            fileName: "[project]/components/project-cell.tsx",
+                            lineNumber: 53,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/project-cell.tsx",
+                        lineNumber: 44,
+                        columnNumber: 9
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -147,7 +179,7 @@ function ProjectCell({ project }) {
                                 children: project.title
                             }, void 0, false, {
                                 fileName: "[project]/components/project-cell.tsx",
-                                lineNumber: 32,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -155,44 +187,44 @@ function ProjectCell({ project }) {
                                 children: project.desc
                             }, void 0, false, {
                                 fileName: "[project]/components/project-cell.tsx",
-                                lineNumber: 33,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/project-cell.tsx",
-                        lineNumber: 31,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex gap-2 text-xs",
+                        className: "mt-auto flex gap-2 text-xs",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "px-2 py-1 bg-white/10 rounded",
+                                className: "px-2 py-1 rounded bg-black/10",
                                 children: project.tag
                             }, void 0, false, {
                                 fileName: "[project]/components/project-cell.tsx",
-                                lineNumber: 36,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "px-2 py-1 bg-white/10 rounded",
+                                className: "px-2 py-1 rounded bg-black/10",
                                 children: project.country
                             }, void 0, false, {
                                 fileName: "[project]/components/project-cell.tsx",
-                                lineNumber: 37,
+                                lineNumber: 72,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/project-cell.tsx",
-                        lineNumber: 35,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/project-cell.tsx",
-                lineNumber: 23,
+                lineNumber: 25,
                 columnNumber: 7
             }, this)
         ]
