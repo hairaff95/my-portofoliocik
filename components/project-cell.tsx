@@ -23,52 +23,69 @@ export default function ProjectCell({
         setActiveIndex(isActive ? null : index)
       }
     >
+      {/* TITLE STATE */}
       <motion.div
         variants={{
           rest: { opacity: 1 },
           hover: { opacity: 0 },
         }}
         transition={{ duration: 0.25 }}
-        className="text-[14px] font-medium z-10"
+        className="text-[15px] font-medium z-10 text-center px-4"
       >
         {project.title}
       </motion.div>
 
+      {/* CARD STATE */}
       <motion.div
         variants={{
           rest: { opacity: 0, scale: 0.96 },
-    hover: { opacity: 1, scale: 1 },
-  }}
-  transition={{ duration: 0.25 }}
-  className="
-    absolute inset-3 rounded-2xl p-3 flex flex-col gap-3
-    border border-theme
-    shadow-lg
-    dark:shadow-[0_0_0_1px_rgba(255,255,255,0.12)]
-  "
-  style={{
-    background: "var(--bg-card)",
-    backdropFilter: "blur(6px)",
+          hover: { opacity: 1, scale: 1 },
+        }}
+        transition={{ duration: 0.25 }}
+        className="
+          absolute inset-4
+  rounded-3xl
+  p-5
+  flex flex-col gap-4
+  border border-theme
+
+  shadow-[0_8px_30px_rgba(0,0,0,0.12),0_2px_6px_rgba(0,0,0,0.06)]
+  dark:shadow-[0_12px_40px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.08)]
+        "
+        style={{
+          background: "var(--bg-card)",
+          backdropFilter: "blur(8px)",
         }}
       >
-        <div className="w-full h-24 rounded-lg bg-soft" />
+        {/* IMAGE */}
+        <div className="w-full h-44 rounded-2xl bg-soft" />
 
+        {/* TEXT */}
         <div>
-          <h3 className="text-[14px] font-medium">{project.title}</h3>
-          <p className="text-[12px] leading-snug text-soft">{project.desc}</p>
+          <h3 className="text-[16px] font-semibold text-main leading-tight">
+            {project.title}
+          </h3>
+          <p className="text-[13px] leading-snug text-soft mt-1">
+            {project.desc}
+          </p>
         </div>
 
-        <div className="mt-auto flex gap-2 text-xs">
-          <span className="px-2 py-0.5
-  text-[11px]
-  rounded-md
-  bg-soft text-soft">
+        {/* TAGS */}
+        <div className="mt-auto flex gap-2">
+          <span className="
+            px-3 py-1
+            text-[11px]
+            rounded-full
+            bg-soft text-soft
+          ">
             {project.tag}
           </span>
-          <span className="px-2 py-0.5
-  text-[11px]
-  rounded-md
-  bg-soft text-soft">
+          <span className="
+            px-3 py-1
+            text-[11px]
+            rounded-full
+            bg-soft text-soft
+          ">
             {project.country}
           </span>
         </div>

@@ -17,7 +17,7 @@ export default function ProjectsGrid() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   return (
-    <section id="projects" className="relative bg-main pt-16 pb-32 overflow-hidden">
+    <section id="projects" className="relative bg-main pt-16 pb-32">
 
       {/* HEADER */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 lg:px-16 mt-24 mb-20">
