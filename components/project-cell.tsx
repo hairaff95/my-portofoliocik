@@ -1,75 +1,74 @@
 "use client"
 import { motion } from "framer-motion"
 
-export default function ProjectCell({ project }: any) {
+export default function ProjectCell({
+  project,
+  index,
+  activeIndex,
+  setActiveIndex,
+}: any) {
+  const isActive = activeIndex === index
+
   return (
     <motion.div
-      whileHover="hover"
+      className="relative w-full h-full flex items-center justify-center cursor-pointer text-main"
       initial="rest"
-      animate="rest"
-      className="relative w-full h-full flex items-center justify-center bg-white overflow-hidden"
+      animate={isActive ? "hover" : "rest"}
+      whileHover="hover"
+      onMouseEnter={() => setActiveIndex(index)}
+      onMouseLeave={() => {
+        if (!isActive) setActiveIndex(null)
+      }}
+      onClick={() =>
+        setActiveIndex(isActive ? null : index)
+      }
     >
-      {/* Title default */}
       <motion.div
         variants={{
           rest: { opacity: 1 },
           hover: { opacity: 0 },
         }}
         transition={{ duration: 0.25 }}
-        className="text-xl font-semibold z-10"
+        className="text-[14px] font-medium z-10"
       >
         {project.title}
       </motion.div>
 
-      {/* Hover card */}
       <motion.div
         variants={{
-          rest: { opacity: 0 },
-          hover: { opacity: 1 },
-        }}
-        transition={{ duration: 0.25 }}
-        className="
-          absolute inset-4
-          rounded-2xl
-          p-4
-          flex flex-col gap-3
-          text-black
-        "
-        style={{
-          backgroundColor: "#95959526",
-          backdropFilter: "blur(6px)",
+          rest: { opacity: 0, scale: 0.96 },
+    hover: { opacity: 1, scale: 1 },
+  }}
+  transition={{ duration: 0.25 }}
+  className="
+    absolute inset-3 rounded-2xl p-3 flex flex-col gap-3
+    border border-theme
+    shadow-lg
+    dark:shadow-[0_0_0_1px_rgba(255,255,255,0.12)]
+  "
+  style={{
+    background: "var(--bg-card)",
+    backdropFilter: "blur(6px)",
         }}
       >
-        {/* IMAGE */}
-        <div
-          className="relative w-full h-32 rounded-xl overflow-hidden"
-          style={{
-            backgroundColor: project.image
-              ? "transparent"
-              : "rgba(149,149,149,0.35)",
-          }}
-        >
-          {project.image && (
-            <img
-              src={project.image}
-              alt={project.title}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          )}
-        </div>
+        <div className="w-full h-24 rounded-lg bg-soft" />
 
-        {/* TEXT */}
         <div>
-          <h3 className="font-semibold">{project.title}</h3>
-          <p className="text-sm opacity-70">{project.desc}</p>
+          <h3 className="text-[14px] font-medium">{project.title}</h3>
+          <p className="text-[12px] leading-snug text-soft">{project.desc}</p>
         </div>
 
-        {/* TAGS */}
         <div className="mt-auto flex gap-2 text-xs">
-          <span className="px-2 py-1 rounded bg-black/10">
+          <span className="px-2 py-0.5
+  text-[11px]
+  rounded-md
+  bg-soft text-soft">
             {project.tag}
           </span>
-          <span className="px-2 py-1 rounded bg-black/10">
+          <span className="px-2 py-0.5
+  text-[11px]
+  rounded-md
+  bg-soft text-soft">
             {project.country}
           </span>
         </div>

@@ -19,12 +19,13 @@ export default function ProfileCard() {
       </div>
 
       {/* LOCATION */}
-      <div className="flex items-center gap-2 text-lg text-black">
+      <div className="flex items-center gap-2 text-lg text-main">
         <img
           width="22"
           height="22"
-          src="https://img.icons8.com/ios/50/earth-planet.png"
-          alt="earth-planet"
+          src="https://img.icons8.com/color/48/earth-planet--v2.png"
+          alt="earth"
+          className="dark:invert"
         />
         Asia/Semarang
       </div>
@@ -47,10 +48,11 @@ function LangButton({ label }: { label: string }) {
         px-5 py-2
         rounded-xl
         text-sm
-        text-black/80
-        border
-        border-black/20
-        bg-white/70
+        text-main
+        border border-theme
+        bg-soft
+        hover:bg-card
+        transition
       "
     >
       {label}

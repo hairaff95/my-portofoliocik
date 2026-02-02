@@ -1,109 +1,52 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import Link from "next/link"
-import { useRouter, usePathname } from "next/navigation"
-import { Home, User, Briefcase, Image } from "lucide-react"
+import { usePathname } from "next/navigation"
+import { Home, User, Briefcase, Image, Sun, Moon } from "lucide-react"
 
-export default function FloatingNavbar() {
-  const router = useRouter()
+export default function FloatingNavbar({
+  dark,
+  toggleTheme,
+}: {
+  dark: boolean
+  toggleTheme: () => void
+}) {
   const pathname = usePathname()
-  const [hash, setHash] = useState("")
 
-  // Track hash changes (Home & Projects)
-  useEffect(() => {
-    const updateHash = () => setHash(window.location.hash)
-    updateHash()
-    window.addEventListener("hashchange", updateHash)
-    return () => window.removeEventListener("hashchange", updateHash)
-  }, [])
-
-  const handleProjectsClick = async () => {
-    if (pathname !== "/") {
-      await router.push("/#projects")
-    }
-
-    requestAnimationFrame(() => {
-      const el = document.getElementById("projects")
-      el?.scrollIntoView({ behavior: "smooth" })
-    })
-  }
-
-  // ✅ ACTIVE LOGIC (SATU SUMBER KEBENARAN)
-  const isHomeActive =
-    pathname === "/" && (hash === "" || hash === "#home")
-
-  const isProjectsActive =
-    pathname === "/" && hash === "#projects"
-
-  const isAboutActive = pathname === "/about"
-  const isGalleryActive = pathname === "/gallery"
+  const isHome = pathname === "/"
+  const isAbout = pathname === "/about"
+  const isGallery = pathname === "/gallery"
+  const projectHref = pathname === "/" ? "#projects" : "/#projects"
 
   return (
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
       <div
         className="
+          navbar-glass
           flex items-center gap-2
-          px-4 py-2
+          px-3 py-2
           rounded-full
-          bg-white/80
-          backdrop-blur-md
-          border border-black/10
-          shadow-lg
-          text-sm
         "
       >
-        {/* HOME */}
-        <NavLink
-          href="/#home"
-          label="Home"
-          icon={<Home size={16} />}
-          active={isHomeActive}
-        />
+        <NavLink href="/" label="Home" icon={<Home size={18} />} active={isHome} />
+        <NavLink href="/about" label="About" icon={<User size={18} />} active={isAbout} />
+        <NavLink href={projectHref} label="Projects" icon={<Briefcase size={18} />} />
+        <NavLink href="/gallery" label="Gallery" icon={<Image size={18} />} active={isGallery} />
 
-        {/* ABOUT */}
-        <NavLink
-          href="/about"
-          label="About"
-          icon={<User size={16} />}
-          active={isAboutActive}
-        />
-
-        {/* PROJECTS */}
         <button
-          onClick={handleProjectsClick}
-          className={`
-            flex items-center gap-2
-            px-2 py-1.5
-            md:px-3 md:py-2
-            rounded-full
+          onClick={toggleTheme}
+          className="
+            nav-item
+            p-2 rounded-full
             transition
-            ${
-              isProjectsActive
-                ? "bg-black/10 text-black"
-                : "hover:bg-black/10 text-black/70"
-            }
-          `}
+          "
         >
-          <Briefcase size={16} />
-          <span className="hidden md:inline">Projects</span>
+          {dark ? <Sun size={18} /> : <Moon size={18} />}
         </button>
-
-        {/* GALLERY */}
-        <NavLink
-          href="/gallery"
-          label="Gallery"
-          icon={<Image size={16} />}
-          active={isGalleryActive}
-        />
       </div>
     </div>
   )
 }
-
-/* ----------------------------- */
-/* Reusable NavLink */
-/* ----------------------------- */
 
 function NavLink({
   href,
@@ -114,22 +57,19 @@ function NavLink({
   href: string
   icon: React.ReactNode
   label: string
-  active: boolean
+  active?: boolean
 }) {
   return (
     <Link
       href={href}
       className={`
+        nav-item
         flex items-center gap-2
-        px-2 py-1.5
-        md:px-3 md:py-2
+        px-4 py-2
         rounded-full
-        transition
-        ${
-          active
-            ? "bg-black/10 text-black"
-            : "hover:bg-black/10 text-black/70"
-        }
+        text-sm font-medium
+        transition-all
+        ${active ? "nav-item-active" : ""}
       `}
     >
       {icon}

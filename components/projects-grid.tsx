@@ -1,3 +1,5 @@
+"use client"
+import { useState } from "react"
 import ProjectCell from "./project-cell"
 
 const projects = [
@@ -12,59 +14,70 @@ const projects = [
 ]
 
 export default function ProjectsGrid() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
   return (
-    <section id="projects" className="relative bg-white px-4 sm:px-6 md:px-20 pt-20 pb-40 lg:py-32 lg:pb-40 overflow-hidden">
+    <section id="projects" className="relative bg-main pt-16 pb-32 overflow-hidden">
+
       {/* HEADER */}
-      <div className="max-w-[1400px] mx-auto mb-20">
-        <p className="text-sm tracking-widest text-gray-500 mb-4">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 lg:px-16 mt-24 mb-20">
+        <p className="text-[12px] tracking-widest text-soft mb-2">
           Projects By Rafi
         </p>
-        <h2 className="text-6xl font-bold">
+        <h2 className="text-[24px] font-semibold
+  md:text-6xl">
           My Projects
         </h2>
       </div>
 
-      {/* ================= MOBILE: HORIZONTAL SCROLL ================= */}
+      {/* MOBILE */}
       <div className="lg:hidden overflow-x-auto">
-        <div className="flex gap-6 px-6">
+        <div className="flex gap-6 px-2">
           {projects.map((p, i) => (
             <div
               key={i}
-              className="
-                shrink-0
-                w-[85vw]
-                max-w-[420px]
-                aspect-square
-              "
+              className="relative shrink-0 w-[85vw] max-w-[420px] aspect-square border-r border-theme"
             >
-              <ProjectCell project={p} />
+              <ProjectCell
+                project={p}
+                index={i}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+              />
             </div>
           ))}
         </div>
       </div>
 
-      {/* ================= DESKTOP: GRID ================= */}
-    <div className="hidden lg:block relative max-w-[1400px] mx-auto">
-      <div className="relative grid grid-cols-4 grid-rows-2">
-        {projects.map((p, i) => (
-          <div key={i} className="aspect-square">
-            <ProjectCell project={p} />
-          </div>
-        ))}
+      {/* DESKTOP */}
+      <div className="hidden lg:block max-w-[1400px] mx-auto">
+        <div className="w-full h-px border-theme border-t" />
 
-        {/* Vertical lines */}
-        {[...Array(3)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute top-0 bottom-0 border-r border-black/10"
-            style={{ left: `${((i + 1) / 4) * 100}%` }}
-          />
-        ))}
+        <div className="grid grid-cols-4 grid-rows-2">
+          {projects.map((p, i) => {
+            const isLastCol = (i + 1) % 4 === 0
+            const isLastRow = i >= projects.length - 4
 
-        {/* Horizontal line */}
-        <div className="absolute left-0 right-0 top-1/2 border-t border-black/10" />
+            return (
+              <div
+                key={i}
+                className={`
+                  aspect-square
+                  ${!isLastCol ? "border-r border-theme" : ""}
+                  ${!isLastRow ? "border-b border-theme" : ""}
+                `}
+              >
+                <ProjectCell
+                  project={p}
+                  index={i}
+                  activeIndex={activeIndex}
+                  setActiveIndex={setActiveIndex}
+                />
+              </div>
+            )
+          })}
+        </div>
       </div>
-    </div>
     </section>
   )
 }
