@@ -36,7 +36,11 @@ export default function ProjectsGrid() {
           {projects.map((p, i) => (
             <div
               key={i}
-              className="relative shrink-0 w-[85vw] max-w-[420px] aspect-square border-r border-theme"
+              className="relative shrink-0
+  w-[85vw] max-w-[420px]
+  h-[420px]
+  border-r border-theme
+  pb-12"
             >
               <ProjectCell
                 project={p}
